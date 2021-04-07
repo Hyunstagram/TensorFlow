@@ -1,0 +1,645 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Introduction : Jetson-Inference &mdash; AI_beginner_course 1.0.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../_static/SierraBASE.png"/>
+  
+
+  
+  
+
+  
+    <link rel="canonical" href="https://sierrabaselab.github.io/AI_beginner_course/text/#3_Jetson_Opensource.html" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Introduction : Teachble Machine" href="%232_Image_Classification.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> AI_beginner_course
+          
+
+          
+            
+            <img src="../_static/SierraBASE.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Get Started:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="%231_Get_Started.html">Install : Prerequisies and Dependencies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="%231_Get_Started.html#install-tensorflow">Install : tensorflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="%231_Get_Started.html#download-project">Download : Project</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Image_classifciation:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="%232_Image_Classification.html">Introduction : Teachble Machine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="%232_Image_Classification.html#how-to-train">1. How to train</a></li>
+<li class="toctree-l1"><a class="reference internal" href="%232_Image_Classification.html#inference-and-results">2. Inference and Results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="%232_Image_Classification.html#introduction-mnist">Introduction : MNIST</a></li>
+<li class="toctree-l1"><a class="reference internal" href="%232_Image_Classification.html#training-phase">1. Training Phase</a></li>
+<li class="toctree-l1"><a class="reference internal" href="%232_Image_Classification.html#data-preparation">2. Data Preparation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="%232_Image_Classification.html#inference">3. Inference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="%232_Image_Classification.html#faq">FAQ</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Advanced_AI:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Introduction : Jetson-Inference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#build-models">1. Build models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#let-s-run-some-files">2. Let’s Run some files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#introduction-object-tracking-udt">Introduction : Object Tracking(UDT)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#let-s-run-udt-py">0. Let’s run UDT.py</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">AI_beginner_course</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Introduction : Jetson-Inference</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/text/" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="introduction-jetson-inference">
+<h1>Introduction : Jetson-Inference<a class="headerlink" href="#introduction-jetson-inference" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://developer.nvidia.com/embedded/twodaystoademo"><img alt="hello_jetson" src="../_images/Jetson_Inference_Tutorial.jpg" /></a></p>
+<p><code class="docutils literal notranslate"><span class="pre">Jetson</span> <span class="pre">Inference</span></code> is an opensource to introduce Deep Neural Network models, which can run in real-time and accurately. Especially, this repository uses NVIDIA TensorRT for efficiently deploying neural networks onto the embedded Jetson platform(e.g. nano, tx2, xaiver …), improving performance and power efficiency using graph optimizations, kernel fusion, and FP(Float Precision)16/INT8 precision. In more details, refer to <a class="reference external" href="https://github.com/dusty-nv/jetson-inference">this site(github)</a>.</p>
+<p>Morerover, it supports to</p>
+<ul class="simple">
+<li><p>training (Transfer Learning / Re-training)</p>
+<ul>
+<li><p>Classification</p>
+<ul>
+<li><p>Cat/Dog Dataset</p></li>
+<li><p>PlantCLEF Dataset</p></li>
+<li><p>Your Own Image Dataset</p></li>
+</ul>
+</li>
+<li><p>Object Detection</p>
+<ul>
+<li><p>SSD-Mobilenet Network</p></li>
+<li><p>Your Own Detection Dataset</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Inference</p>
+<ul>
+<li><p>Classification</p>
+<ul>
+<li><p>Imagenet with Image / Video</p></li>
+<li><p>your Own Image</p></li>
+</ul>
+</li>
+<li><p>Object Detection</p>
+<ul>
+<li><p>Face</p></li>
+<li><p>COCO containing dogs, bottles, etc.</p></li>
+</ul>
+</li>
+<li><p>Semantic Segmentation</p>
+<ul>
+<li><p>Cityspcapes Dataset</p></li>
+<li><p>DeepScene Dataset etc.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="build-models">
+<h1>1. Build models<a class="headerlink" href="#build-models" title="Permalink to this headline">¶</a></h1>
+<p>Note that you need to get ready for download opensource.</p>
+<ol>
+<li><p>Go into <code class="docutils literal notranslate"><span class="pre">AI_beginner_course/DL_course/</span></code> and download opensource.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ <span class="nb">cd</span> ..
+$ git clone https://github.com/dusty-nv/jetson-inference
+$ <span class="nb">cd</span> jetson-inference
+$ git submodule update --init
+</pre></div>
+</div>
+</li>
+<li><p>Set some settings for build.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ mkdir build
+$ <span class="nb">cd</span> build
+$ cmake ../
+</pre></div>
+</div>
+<p>You might be confused because of the options of cmake. Note that the default models is</p>
+<ul class="simple">
+<li><p>Image Recoginition</p>
+<ul>
+<li><p>GoogleNet</p></li>
+<li><p>ResNet-18</p></li>
+</ul>
+</li>
+<li><p>Object Detection</p>
+<ul>
+<li><p>SSD-MobileNet-v2</p></li>
+<li><p>PedNet</p></li>
+<li><p>FaceNet</p></li>
+<li><p>DetectNet-COCO-Dog</p></li>
+</ul>
+</li>
+<li><p>Semantic Segmentation</p>
+<ul>
+<li><p>FCN-ResNet18-Cityspaces-512x256</p></li>
+<li><p>FCN-ResNet18-DeepScene-576x320</p></li>
+<li><p>FCN-ResNet18-MHP-512x320</p></li>
+<li><p>FCN-ResNet18-Pascal-VOC-320x320</p></li>
+<li><p>FCN-ResNet18-SUN-RGBD-512x400</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>Just press <code class="docutils literal notranslate"><span class="pre">enter</span></code></strong>(Recommend). If you want to download all, you can select menu, where contains “all models”, by pressing <code class="docutils literal notranslate"><span class="pre">spacebar</span></code>.</p>
+<p><img alt="Model_select1" src="../_images/model_list1.png" /></p>
+<p>Moreover, in this case, I recommend to select to install <code class="docutils literal notranslate"><span class="pre">pytorch</span></code></p>
+<p><img alt="Model_select2" src="../_images/model_list2.png" /></p>
+<p>It will take a lot of time( ~ 20 mins).</p>
+</li>
+<li><p>Let’s build and compile!</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ make -j<span class="k">$(</span>nproc<span class="k">)</span>
+$ sudo make install
+$ sudo ldconfig
+</pre></div>
+</div>
+</li>
+</ol>
+</div>
+<div class="section" id="let-s-run-some-files">
+<h1>2. Let’s Run some files<a class="headerlink" href="#let-s-run-some-files" title="Permalink to this headline">¶</a></h1>
+<p>Let’s check the results of pretrained models.</p>
+<ul class="simple">
+<li><p>Image Classification - <a class="reference external" href="http://www.image-net.org/">ImageNet</a></p></li>
+</ul>
+<p>Here it is a basic step :</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ <span class="nb">cd</span> aarch64/bin/
+$ python3 imagenet.py /dev/video0
+</pre></div>
+</div>
+<p>And here is a result,</p>
+<p><img alt="image_classification" src="../_images/image_classification.png" /></p>
+<p>Note that the default option of <code class="docutils literal notranslate"><span class="pre">imagenet.py</span></code> file is <code class="docutils literal notranslate"><span class="pre">network=GoogLeNet</span></code>
+On the other hand, the location <code class="docutils literal notranslate"><span class="pre">/dev/video0</span></code> indicates your input sources. That is, you used <strong>USB CAMERA</strong></p>
+<p>You can change other models. Then, let’s change the other model, <code class="docutils literal notranslate"><span class="pre">ResNet-18</span></code>!!</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ python3 imagenet.py --network<span class="o">=</span>resnet-18 /dev/video0
+</pre></div>
+</div>
+<p>There is a table shows jetson-inference repository supports.</p>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th align="center">Network</th>
+<th>CLI argument</th>
+<th>NetworkType enum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">AlexNet</td>
+<td><code>alexnet</code></td>
+<td><code>ALEXNET</code></td>
+</tr>
+<tr>
+<td align="center">GoogleNet</td>
+<td><code>googlenet</code></td>
+<td><code>GOOGLENET</code></td>
+</tr>
+<tr>
+<td align="center">GoogleNet-12</td>
+<td><code>googlenet-12</code></td>
+<td><code>GOOGLENET_12</code></td>
+</tr>
+<tr>
+<td align="center">ResNet-18</td>
+<td><code>resnet-18</code></td>
+<td><code>RESNET_18</code></td>
+</tr>
+<tr>
+<td align="center">ResNet-50</td>
+<td><code>resnet-50</code></td>
+<td><code>RESNET_50</code></td>
+</tr>
+<tr>
+<td align="center">ResNet-101</td>
+<td><code>resnet-101</code></td>
+<td><code>RESNET_101</code></td>
+</tr>
+<tr>
+<td align="center">ResNet-152</td>
+<td><code>resnet-152</code></td>
+<td><code>RESNET_152</code></td>
+</tr>
+<tr>
+<td align="center">VGG-16</td>
+<td><code>vgg-16</code></td>
+<td><code>VGG-16</code></td>
+</tr>
+<tr>
+<td align="center">VGG-19</td>
+<td><code>vgg-19</code></td>
+<td><code>VGG-19</code></td>
+</tr>
+<tr>
+<td align="center">Inception-v4</td>
+<td><code>inception-v4</code></td>
+<td><code>INCEPTION_V4</code></td>
+</tr>
+</tbody>
+</table><p>You could see the various models before build makes. In details, please visit <a class="reference external" href="https://github.com/dusty-nv/jetson-inference">this github site</a>.</p>
+<ul class="simple">
+<li><p>Object Detection</p></li>
+</ul>
+<p>Object Detection models show the bounded boxes we trained.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ python3 detectnet.py /dev/video0
+</pre></div>
+</div>
+<p>Then, the result will be,</p>
+<p><img alt="object_detection" src="../_images/object_detection.png" /></p>
+<p>In this case, we can check the default network is SSD-MobileNet-V2. and the below table is network model list. and <a class="reference external" href="https://cocodataset.org/#home">COCO</a> is the most used Image Datasets. There are many labelings (Person, chair, animals, … and so on) in COCO Datasets. For training them, we need much times and expensive devices. So we simply introduce object detection’s inference.</p>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th>Network</th>
+<th>CLI argument</th>
+<th>NetworkType enum</th>
+<th>Object classes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SSD-Mobilenet-v1</td>
+<td><code>ssd-mobilenet-v1</code></td>
+<td><code>SSD_MOBILENET_V1</code></td>
+<td>91 (COCO classes)</td>
+</tr>
+<tr>
+<td>SSD-Mobilenet-v2</td>
+<td><code>ssd-mobilenet-v2</code></td>
+<td><code>SSD_MOBILENET_V2</code></td>
+<td>91 (COCO classes)</td>
+</tr>
+<tr>
+<td>SSD-Inception-v2</td>
+<td><code>ssd-inception-v2</code></td>
+<td><code>SSD_INCEPTION_V2</code></td>
+<td>91 (COCO classes)</td>
+</tr>
+<tr>
+<td>DetectNet-COCO-Dog</td>
+<td><code>coco-dog</code></td>
+<td><code>COCO_DOG</code></td>
+<td>dogs</td>
+</tr>
+<tr>
+<td>DetectNet-COCO-Bottle</td>
+<td><code>coco-bottle</code></td>
+<td><code>COCO_BOTTLE</code></td>
+<td>bottles</td>
+</tr>
+<tr>
+<td>DetectNet-COCO-Chair</td>
+<td><code>coco-chair</code></td>
+<td><code>COCO_CHAIR</code></td>
+<td>chairs</td>
+</tr>
+<tr>
+<td>DetectNet-COCO-Airplane</td>
+<td><code>coco-airplane</code></td>
+<td><code>COCO_AIRPLANE</code></td>
+<td>airplanes</td>
+</tr>
+<tr>
+<td>ped-100</td>
+<td><code>pednet</code></td>
+<td><code>PEDNET</code></td>
+<td>pedestrians</td>
+</tr>
+<tr>
+<td>multiped-500</td>
+<td><code>multiped</code></td>
+<td><code>PEDNET_MULTI</code></td>
+<td>pedestrians, luggage</td>
+</tr>
+<tr>
+<td>facenet-120</td>
+<td><code>facenet</code></td>
+<td><code>FACENET</code></td>
+<td>faces</td>
+</tr>
+</tbody>
+</table><p>You may choose other networks. Copy from the CLI argument of the table. This is an example to detect our face.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ python3 detectnet.py --network<span class="o">=</span>facenet /dev/video0
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Semantic Segmentation.</p></li>
+</ul>
+<p>Semantic Segmentation models can show the more accurate area to express objects.</p>
+<p>The default model is <code class="docutils literal notranslate"><span class="pre">FCN-ResNet18-Pascal-VOC-320x320</span></code></p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ python3 segnet.py /dev/video0
+</pre></div>
+</div>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th align="center">Dataset</th>
+<th align="center">Resolution</th>
+<th>CLI Argument</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><a href="https://www.cityscapes-dataset.com/">Cityscapes</a></td>
+<td align="center">512x256</td>
+<td><code>fcn-resnet18-cityscapes-512x256</code></td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.cityscapes-dataset.com/">Cityscapes</a></td>
+<td align="center">1024x512</td>
+<td><code>fcn-resnet18-cityscapes-1024x512</code></td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.cityscapes-dataset.com/">Cityscapes</a></td>
+<td align="center">2048x1024</td>
+<td><code>fcn-resnet18-cityscapes-2048x1024</code></td>
+</tr>
+<tr>
+<td align="center"><a href="http://deepscene.cs.uni-freiburg.de/">DeepScene</a></td>
+<td align="center">576x320</td>
+<td><code>fcn-resnet18-deepscene-576x320</code></td>
+</tr>
+<tr>
+<td align="center"><a href="http://deepscene.cs.uni-freiburg.de/">DeepScene</a></td>
+<td align="center">864x480</td>
+<td><code>fcn-resnet18-deepscene-864x480</code></td>
+</tr>
+<tr>
+<td align="center"><a href="https://lv-mhp.github.io/">Multi-Human</a></td>
+<td align="center">512x320</td>
+<td><code>fcn-resnet18-mhp-512x320</code></td>
+</tr>
+<tr>
+<td align="center"><a href="https://lv-mhp.github.io/">Multi-Human</a></td>
+<td align="center">640x360</td>
+<td><code>fcn-resnet18-mhp-512x320</code></td>
+</tr>
+<tr>
+<td align="center"><a href="http://host.robots.ox.ac.uk/pascal/VOC/">Pascal VOC</a></td>
+<td align="center">320x320</td>
+<td><code>fcn-resnet18-voc-320x320</code></td>
+</tr>
+<tr>
+<td align="center"><a href="http://host.robots.ox.ac.uk/pascal/VOC/">Pascal VOC</a></td>
+<td align="center">512x320</td>
+<td><code>fcn-resnet18-voc-512x320</code></td>
+</tr>
+<tr>
+<td align="center"><a href="http://rgbd.cs.princeton.edu/">SUN RGB-D</a></td>
+<td align="center">512x400</td>
+<td><code>fcn-resnet18-sun-512x400</code></td>
+</tr>
+<tr>
+<td align="center"><a href="http://rgbd.cs.princeton.edu/">SUN RGB-D</a></td>
+<td align="center">640x512</td>
+<td><code>fcn-resnet18-sun-640x512</code></td>
+</tr>
+</tbody>
+</table><p>the another installed network is <code class="docutils literal notranslate"><span class="pre">FCN-ResNet18-DeepScene-576x320</span></code> Let’s try this.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ python3 segnet.py --network<span class="o">=</span>fcn-resnet18-deepscene-576x320 /dev/video0
+</pre></div>
+</div>
+</div>
+<div class="section" id="introduction-object-tracking-udt">
+<h1>Introduction : Object Tracking(UDT)<a class="headerlink" href="#introduction-object-tracking-udt" title="Permalink to this headline">¶</a></h1>
+<p>The <strong>Object Tracking Algorithm</strong> means the task to take the first initial set from Object Detection results, to create an unique ID for the firstly detected result respectly, and to track these obejcts by Video(Image Sqequence). A lot of Tracking algorithms are proposed. However, to inference still fast and accurate in Jetson nano, we need to get the much light models.</p>
+<p><img alt="UDT_gituhb" src="../_images/UDT_Capture.png" /></p>
+<p>So, I introduce the <a class="reference external" href="https://openaccess.thecvf.com/content_CVPR_2019/html/Wang_Unsupervised_Deep_Tracking_CVPR_2019_paper.html">Unsupervised Deep Tracking, UDT</a> Algorithm(2019). From this model, we obtain the fact that <strong>FPS</strong> is 70, and <strong>AUC Score</strong> is 59.4%. It is very high score to compare other Supervised-based tracking methods.</p>
+<p>Anyway, we can enjoy this tacking algorithms, by <code class="docutils literal notranslate"><span class="pre">drag-and-drop</span></code> a	nd <code class="docutils literal notranslate"><span class="pre">enter</span></code> key. I modified this code from <a class="reference external" href="https://github.com/594422814/UDT_pytorch">here</a>. You can also find the summary from  <a class="reference external" href="https://github.com/SierrabaseLab/AI_beginner_course/blob/master/DL_course/Object_Tracking/README.md">AI_beginner_course/DL_cousre/Object_Tracking/README.md</a> file.</p>
+</div>
+<div class="section" id="let-s-run-udt-py">
+<h1>0. Let’s run UDT.py<a class="headerlink" href="#let-s-run-udt-py" title="Permalink to this headline">¶</a></h1>
+<p>This phase is very simple. So I recommend to expriment very various inputs.</p>
+<ol>
+<li><p>Go into Object Tracking files.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ <span class="nb">cd</span> ../../../../Object_Tracking/
+</pre></div>
+</div>
+<p>Or if you’re confused your path, then it is also a good way to start from home directory!!</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># My_Project_Name is &quot;SierrabaseLab&quot;</span>
+$ <span class="nb">cd</span> /home/<span class="o">{</span>Your_Project_Name<span class="o">}</span>/AI_beginner_course/DL_course/Object_Tracking/
+</pre></div>
+</div>
+</li>
+<li><p>You Remember only <code class="docutils literal notranslate"><span class="pre">UDT.py</span></code></p>
+<p>That is, just run :</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ python3 UDT.py
+</pre></div>
+</div>
+<p>Then, the image would be captured. In this frame, you must</p>
+<ul class="simple">
+<li><p>Drag-and-Drop</p></li>
+<li><p>Press <code class="docutils literal notranslate"><span class="pre">enter</span></code> key</p></li>
+</ul>
+<p>It is a process called <strong>Region Proposal</strong></p>
+<p><img alt="input" src="../_images/Region_Proposal.png" /></p>
+<p>If you’ve completed, then tracking algorithms will be started.</p>
+<p><img alt="output" src="../_images/Result.png" /></p>
+<p>In this course, I left two options whether you use USB WebCamera or Saved Video to input.</p>
+<ol>
+<li><p>Usb Camera (Demo)</p>
+<p>Use <code class="docutils literal notranslate"><span class="pre">--input_source</span> <span class="pre">/dev/video0</span></code>, or <code class="docutils literal notranslate"><span class="pre">--input_source</span> <span class="pre">0</span></code></p>
+<p>Also, you can insert = : <code class="docutils literal notranslate"><span class="pre">input_source=/dev/video0</span></code>, or <code class="docutils literal notranslate"><span class="pre">--input_source=0</span></code></p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ python3 UDT.py
+$ python3 UDT.py --input_source<span class="o">=</span><span class="m">0</span>
+$ python3 UDT.py --input_source <span class="m">0</span>
+$ python3 UDT.py --input_source<span class="o">=</span>/dev/video0
+$ python3 UDT.py --input_source /dev/video0
+</pre></div>
+</div>
+<p>The above five lines are the same meaning!</p>
+</li>
+<li><p>Any Video Input</p>
+<p>I processed some <a class="reference external" href="https://www.votchallenge.net/vot2016/dataset.html">VOC 2016</a> Oepn Datasets. Especially, you can experiment <code class="docutils literal notranslate"><span class="pre">bag.avi</span></code> and <code class="docutils literal notranslate"><span class="pre">car1.avi</span></code></p>
+<p>For instance, this is the converted <code class="docutils literal notranslate"><span class="pre">bag.avi</span></code> file.</p>
+<p><img alt="bag" src="../_images/bag.gif" /></p>
+<p>Use <code class="docutils literal notranslate"><span class="pre">--input_source</span> <span class="pre">bag.avi</span></code> or <code class="docutils literal notranslate"><span class="pre">--input_source</span> <span class="pre">car1.avi</span></code></p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ python3 UDT.py --input_source bag.avi
+$ python3 UDT.py --input_source car1.avi
+</pre></div>
+</div>
+</li>
+</ol>
+</li>
+</ol>
+<p>Until now, you’ve seen the popular AI algorithms with Jetson nano. Congratulation!!</p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="%232_Image_Classification.html" class="btn btn-neutral float-left" title="Introduction : Teachble Machine" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, SierraBaseLab.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

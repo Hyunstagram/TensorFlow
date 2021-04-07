@@ -1,0 +1,307 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Install : Prerequisies and Dependencies &mdash; AI_beginner_course 1.0.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="_static/SierraBASE.png"/>
+  
+
+  
+  
+
+  
+    <link rel="canonical" href="https://sierrabaselab.github.io/AI_beginner_course/Get_Started.html" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Indtroduction : MNIST" href="MNIST/Guide_Line.html" />
+    <link rel="prev" title="Welcome to AI_beginner_course’s documentation!" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> AI_beginner_course
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Get Started:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Install : Prerequisies and Dependencies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#install-tensorflow">Install : tensorflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#download-project">Download : Project</a></li>
+</ul>
+<p class="caption"><span class="caption-text">MNIST:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="MNIST/Guide_Line.html">Indtroduction : MNIST</a></li>
+<li class="toctree-l1"><a class="reference internal" href="MNIST/Guide_Line.html#training-phase">1. Training Phase</a></li>
+<li class="toctree-l1"><a class="reference internal" href="MNIST/Guide_Line.html#data-preparation">2. Data Preparation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="MNIST/Guide_Line.html#inference">3. Inference</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Jetson-Inference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Inference/Guide_Line.html">Introduction : jetson-inference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Inference/Guide_Line.html#build-models">1. Build models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Inference/Guide_Line.html#let-s-run-some-files">2. Let’s Run some files</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">AI_beginner_course</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Install : Prerequisies and Dependencies</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/Get_Started.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="install-prerequisies-and-dependencies">
+<h1>Install : Prerequisies and Dependencies<a class="headerlink" href="#install-prerequisies-and-dependencies" title="Permalink to this headline">¶</a></h1>
+<p>First of all, we need to install “Nvidia Jetson nano toolkit” following the <a class="reference external" href="https://developer.nvidia.com/embedded/learn/get-started-jetson-nano-devkit#write">official instructions</a>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">It</span> <span class="n">might</span> <span class="n">take</span> <span class="mi">7</span> <span class="n">mins</span> <span class="o">~</span> <span class="mi">15</span> <span class="n">mins</span><span class="o">.</span>
+<span class="p">(</span><span class="ow">in</span> <span class="n">the</span> <span class="n">case</span> <span class="n">that</span> <span class="n">you</span> <span class="n">downloaded</span> <span class="n">Ether</span> <span class="n">Program</span> <span class="ow">and</span> <span class="n">jetson</span> <span class="n">image</span><span class="p">,</span> <span class="n">already</span><span class="p">)</span>
+<span class="n">Note</span> <span class="n">that</span> <span class="n">we</span> <span class="n">don</span><span class="s1">&#39;t care whatever your OS(e.g. Windows, Linux, Mac) is.</span>
+<span class="n">You</span> <span class="n">need</span> <span class="n">just</span> <span class="n">a</span> <span class="n">desktop</span> <span class="n">which</span> <span class="n">can</span> <span class="n">download</span> <span class="n">faster</span><span class="o">.</span>
+<span class="n">Also</span><span class="p">,</span> <span class="n">you</span> <span class="n">can</span> <span class="nb">set</span> <span class="n">your</span> <span class="n">jetson</span> <span class="n">ID</span> <span class="n">yourself</span><span class="o">.</span> <span class="p">(</span><span class="n">I</span> <span class="nb">set</span> <span class="n">SierrabaseCourse</span><span class="o">.</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Before install tensorflow, you have to check Jetpack version (<strong>It is so important!</strong>). The way to check jetpack version is very simple. If your download zip name is <code class="docutils literal notranslate"><span class="pre">jetson-nano-jp451-sd-card-image.zip</span></code>, this means you’ve installed JetPack 4.5.1 version.</p>
+<p>In my case, these packages are set up</p>
+<ul class="simple">
+<li><p>JetPack 4.5.1</p></li>
+<li><p>L4T 32.5.1</p></li>
+<li><p>TensorRT 7.1.3</p></li>
+<li><p>CUDA 10.2</p></li>
+<li><p>CuDNN 8.0</p></li>
+<li><p>OpenCV 4.1.1</p></li>
+<li><p>VPI 1.0</p></li>
+</ul>
+<p>by <a class="reference external" href="https://developer.nvidia.com/embedded/jetpack">this link</a>. If you want to know older version, <a class="reference external" href="https://developer.nvidia.com/embedded/jetpack-archive">check this site</a></p>
+<p>Also, the suitable tensorflow version can be found in <a class="reference external" href="https://docs.nvidia.com/deeplearning/frameworks/install-tf-jetson-platform-release-notes/tf-jetson-rel.html#tf-jetson-rel">here</a>. My tensorflow version is 2.4.0!!</p>
+<p>Now, let’s begin installation packages for Jetson nano kit. You must proceed with Jetson nano. Jetson nano OS is based on <code class="docutils literal notranslate"><span class="pre">Ubuntu</span></code>. So, it may be not diffcult. Now, let’s open Terminal with commands (‘Ctrl’ + ‘Alt’ + ‘T’).</p>
+<ol>
+<li><p>Install System Packages</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ sudo apt-get update
+$ sudo apt-get install libhdf5-serial-dev hdf5-tools libhdf5-dev zlib1g-dev zip libjpeg8-dev liblapack-dev libblas-dev gfortran tree
+</pre></div>
+</div>
+</li>
+<li><p>Upgrade pip3</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ sudo apt-get install python3-pip
+$ sudo pip3 install -U pip testresources <span class="nv">setuptools</span><span class="o">==</span><span class="m">49</span>.6.0
+</pre></div>
+</div>
+</li>
+<li><p>Install Python Package Dependencies</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ sudo pip3 install -U <span class="nv">numpy</span><span class="o">==</span><span class="m">1</span>.19.4 <span class="nv">future</span><span class="o">==</span><span class="m">0</span>.18.2 <span class="nv">mock</span><span class="o">==</span><span class="m">3</span>.0.5 <span class="nv">h5py</span><span class="o">==</span><span class="m">2</span>.10.0 <span class="nv">keras_preprocessing</span><span class="o">==</span><span class="m">1</span>.1.1 <span class="nv">keras_applications</span><span class="o">==</span><span class="m">1</span>.0.8 <span class="nv">gast</span><span class="o">==</span><span class="m">0</span>.2.2 futures protobuf pybind11
+</pre></div>
+</div>
+</li>
+</ol>
+</div>
+<div class="section" id="install-tensorflow">
+<h1>Install : tensorflow<a class="headerlink" href="#install-tensorflow" title="Permalink to this headline">¶</a></h1>
+<p>Many Developers still find tensorflow(tf) version under 2. You must choose either 1 or 2 <code class="docutils literal notranslate"><span class="pre">(Recommend</span> <span class="pre">to</span> <span class="pre">follow</span> <span class="pre">phase</span> <span class="pre">1,</span> <span class="pre">not</span> <span class="pre">2)</span></code></p>
+<ol>
+<li><p>Install latest version tf &gt; 2.x (Recommend in this course!)</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ sudo pip3 install --pre --extra-index-url https://developer.download.nvidia.com/compute/redist/jp/v45 tensorflow
+</pre></div>
+</div>
+</li>
+<li><p>Or, you can also install lower version tf &lt; 2.x (If you’ve finished step 1, never do this!)</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ sudo pip3 install --pre --extra-index-url https://developer.download.nvidia.com/compute/redist/jp/v45 ‘tensorflow&lt;<span class="m">2</span>’
+</pre></div>
+</div>
+</li>
+</ol>
+</div>
+<div class="section" id="download-project">
+<h1>Download : Project<a class="headerlink" href="#download-project" title="Permalink to this headline">¶</a></h1>
+<p>Congraturations!! We start projects</p>
+<p>I set <code class="docutils literal notranslate"><span class="pre">/home/{your_nano_id}/AI_beginner_course</span></code></p>
+<ol>
+<li><p>Go into your home directory</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ <span class="nb">cd</span>
+</pre></div>
+</div>
+</li>
+<li><p>Download project from github</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ git clone https://github.com/SierrabaseLab/AI_beginner_course.git
+</pre></div>
+</div>
+</li>
+<li><p>Prepare next folder to <code class="docutils literal notranslate"><span class="pre">./DL_course/Image_classification</span></code></p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ <span class="nb">cd</span> AI_beginner_course/DL_course/Image_Classification/
+</pre></div>
+</div>
+</li>
+</ol>
+<p>The next “MNIST Tutorial” Section continues…</p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="MNIST/Guide_Line.html" class="btn btn-neutral float-right" title="Indtroduction : MNIST" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to AI_beginner_course’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, SierraBaseLab.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
